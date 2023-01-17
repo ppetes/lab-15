@@ -3,9 +3,39 @@ using namespace std;
 
 template <typename T>
 void insertionSort(T d[],int N){
-
+ T key;
+ int i, j;
+    for (i = 1; i < N; i++)
+    {
+        key = d[i];
+        j = i - 1;
+ 
+       
+        while (j >= 0 && d[j] < key)
+        {
+            d[j + 1] = d[j];
+            j = j - 1;
+        }
+        d[j + 1] = key;
+        
+        
+	cout << "Pass " << i << ":";
+	for(int i = 0; i < 10; i++){
+	cout << d[i] << " ";}
+	cout << "\n";
+    }
+	
+}
+ void printArray(int arr[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
 }
 
+
+ 
 int main(){
 	int a[10] = {12,25,30,44,2,0,4,7,55,25};
 	cout << "Input Array:";
